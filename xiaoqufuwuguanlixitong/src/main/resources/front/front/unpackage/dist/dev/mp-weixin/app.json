@@ -1,0 +1,105 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/forget/forget",
+    "pages/center/center",
+    "pages/user-info/userinfo",
+    "pages/anbao/list",
+    "pages/anbao/list2",
+    "pages/anbao/add-or-update",
+    "pages/anbao/detail",
+    "pages/anbaoFenpei/list",
+    "pages/anbaoFenpei/list2",
+    "pages/anbaoFenpei/add-or-update",
+    "pages/anbaoFenpei/detail",
+    "pages/chat/list",
+    "pages/chat/list2",
+    "pages/chat/add-or-update",
+    "pages/chat/detail",
+    "pages/fangwu/list",
+    "pages/fangwu/list2",
+    "pages/fangwu/add-or-update",
+    "pages/fangwu/detail",
+    "pages/fankiu/list",
+    "pages/fankiu/list2",
+    "pages/fankiu/add-or-update",
+    "pages/fankiu/detail",
+    "pages/forum/forum-index",
+    "pages/forum/forum-detail",
+    "pages/forum/forum-my",
+    "pages/forum/forum-add-or-update",
+    "pages/gonggao/list",
+    "pages/gonggao/list2",
+    "pages/gonggao/add-or-update",
+    "pages/gonggao/detail",
+    "pages/weixui/list",
+    "pages/weixui/list2",
+    "pages/weixui/add-or-update",
+    "pages/weixui/detail",
+    "pages/yonghu/list",
+    "pages/yonghu/list2",
+    "pages/yonghu/add-or-update",
+    "pages/yonghu/detail",
+    "pages/yuangong/list",
+    "pages/yuangong/list2",
+    "pages/yuangong/add-or-update",
+    "pages/yuangong/detail",
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小区服务管理系统",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#fff",
+    "borderStyle": "black",
+    "backgroundColor": "#ff9569",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/index.png",
+        "selectedIconPath": "static/tabs/index1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/fangwu/list",
+        "iconPath": "static/tabs/type.png",
+        "selectedIconPath": "static/tabs/type1.png",
+        "text": "房屋"
+      },
+      {
+        "pagePath": "pages/gonggao/list",
+        "iconPath": "static/tabs/type.png",
+        "selectedIconPath": "static/tabs/type1.png",
+        "text": "公告"
+      },
+      {
+        "pagePath": "pages/forum/forum-index",
+        "iconPath": "static/tabs/order.png",
+        "selectedIconPath": "static/tabs/order1.png",
+        "text": "论坛"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/tabs/mine.png",
+        "selectedIconPath": "static/tabs/mine1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序将使用定位功能"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "usingComponents": {}
+}

@@ -1,0 +1,387 @@
+{
+	"pages": [{
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "登录"
+		}
+	},{
+		"path": "pages/register/register",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "注册"
+		}
+	},{
+		"path": "pages/forget/forget",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "忘记密码"
+		}
+	},{
+		"path": "pages/center/center",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的"
+		}
+	},{
+		"path": "pages/user-info/userinfo",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户信息"
+		}
+	}
+
+	,{
+		"path": "pages/anbao/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "安保展示"
+		}
+	},{
+		"path": "pages/anbao/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的安保"
+		}
+	},{
+		"path": "pages/anbao/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "安保添加/修改"
+		}
+	},{
+		"path": "pages/anbao/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "安保详情"
+		}
+	}
+	,{
+		"path": "pages/anbaoFenpei/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "安保分配展示"
+		}
+	},{
+		"path": "pages/anbaoFenpei/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的安保分配"
+		}
+	},{
+		"path": "pages/anbaoFenpei/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "安保分配添加/修改"
+		}
+	},{
+		"path": "pages/anbaoFenpei/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "安保分配详情"
+		}
+	}
+	,{
+		"path": "pages/chat/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "客服聊天展示"
+		}
+	},{
+		"path": "pages/chat/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的客服聊天"
+		}
+	},{
+		"path": "pages/chat/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "客服聊天添加/修改"
+		}
+	},{
+		"path": "pages/chat/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "客服聊天详情"
+		}
+	}
+	,{
+		"path": "pages/fangwu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "房屋展示"
+		}
+	},{
+		"path": "pages/fangwu/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的房屋"
+		}
+	},{
+		"path": "pages/fangwu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "房屋添加/修改"
+		}
+	},{
+		"path": "pages/fangwu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "房屋详情"
+		}
+	}
+	,{
+		"path": "pages/fankiu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "反馈展示"
+		}
+	},{
+		"path": "pages/fankiu/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的反馈"
+		}
+	},{
+		"path": "pages/fankiu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "反馈添加/修改"
+		}
+	},{
+		"path": "pages/fankiu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "反馈详情"
+		}
+	}
+       ,{
+		"path": "pages/forum/forum-index",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "全部发帖"
+		}
+	},{
+		"path": "pages/forum/forum-detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "发帖详情"
+		}
+	},{
+		"path": "pages/forum/forum-my",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的发帖"
+		}
+	},{
+		"path": "pages/forum/forum-add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "发贴(修改/新增)"
+		}
+	}
+	,{
+		"path": "pages/gonggao/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告展示"
+		}
+	},{
+		"path": "pages/gonggao/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的公告"
+		}
+	},{
+		"path": "pages/gonggao/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告添加/修改"
+		}
+	},{
+		"path": "pages/gonggao/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告详情"
+		}
+	}
+	,{
+		"path": "pages/weixui/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "反馈处理展示"
+		}
+	},{
+		"path": "pages/weixui/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的反馈处理"
+		}
+	},{
+		"path": "pages/weixui/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "反馈处理添加/修改"
+		}
+	},{
+		"path": "pages/weixui/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "反馈处理详情"
+		}
+	}
+	,{
+		"path": "pages/yonghu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "住户展示"
+		}
+	},{
+		"path": "pages/yonghu/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的住户"
+		}
+	},{
+		"path": "pages/yonghu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "住户添加/修改"
+		}
+	},{
+		"path": "pages/yonghu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "住户详情"
+		}
+	}
+	,{
+		"path": "pages/yuangong/list",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "员工展示"
+		}
+	},{
+		"path": "pages/yuangong/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的员工"
+		}
+	},{
+		"path": "pages/yuangong/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "员工添加/修改"
+		}
+	},{
+		"path": "pages/yuangong/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "员工详情"
+		}
+	}
+			,{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarBackgroundColor": "#e92758",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "小区服务管理系统首页"
+		}
+	}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "小区服务管理系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#FFFFFF",
+		"selectedColor": "#fff",
+		"borderStyle": "black",
+		"backgroundColor": "#ff9569",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/index.png",
+				"selectedIconPath": "static/tabs/index1.png",
+				"text": "首页"
+			}
+			,{
+				"pagePath": "pages/fangwu/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "房屋"
+			}
+			,{
+				"pagePath": "pages/gonggao/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "公告"
+			}
+			,{
+			 	"pagePath": "pages/forum/forum-index",
+				"iconPath": "static/tabs/order.png",
+			 	"selectedIconPath": "static/tabs/order1.png",
+				"text": "论坛"
+			}
+			,{
+				"pagePath": "pages/center/center",
+				"iconPath": "static/tabs/mine.png",
+				"selectedIconPath": "static/tabs/mine1.png",
+				"text": "我的"
+			}
+		]
+	}
+	// "permission": {
+	// 	"scope.userLocation": {
+	// 		"desc": ""
+	// 	}
+	// },
+	// "requiredPrivateInfos": ["getLocation", "chooseLocation"]
+}

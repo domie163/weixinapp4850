@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.WeixuiDao">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        a.id as id
+        ,a.fankiu_id as fankiuId
+        ,a.yuangong_id as yuangongId
+        ,a.insert_time as insertTime
+        ,a.weixui_text as weixuiText
+        ,a.create_time as createTime
+    </sql>
+    <select id="selectListView" parameterType="map" resultType="com.entity.view.WeixuiView" >
+        SELECT
+        <include refid="Base_Column_List" />
+
+--         级联表的字段
+        ,fankiu.yonghu_id as fankiuYonghuId
+        ,fankiu.fankiu_name as fankiuName
+        ,fankiu.fankiu_photo as fankiuPhoto
+        ,fankiu.fankiu_types as fankiuTypes
+        ,fankiu.fankiu_zhuangtai_types as fankiuZhuangtaiTypes
+        ,fankiu.fankiu_content as fankiuContent
+        ,yuangong.yuangong_name as yuangongName
+        ,yuangong.yuangong_phone as yuangongPhone
+        ,yuangong.yuangong_id_number as yuangongIdNumber
+        ,yuangong.yuangong_photo as yuangongPhoto
+
+        FROM weixui  a
+        left JOIN fankiu fankiu ON a.fankiu_id = fankiu.id
+        left JOIN yuangong yuangong ON a.yuangong_id = yuangong.id
+
+        <where>
+            <if test="params.ids != null">
+                and a.id in
+                <foreach item="item" index="index" collection="params.ids" open="(" separator="," close=")">
+                #{item}
+                </foreach>
+            </if>
+            <if test="params.fankiuId != null and params.fankiuId != ''">
+                and (
+                    a.fankiu_id = #{params.fankiuId}
+                )
+            </if>
+            <if test="params.yuangongId != null and params.yuangongId != ''">
+                and (
+                    a.yuangong_id = #{params.yuangongId}
+                )
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+            <if test=" params.weixuiText != '' and params.weixuiText != null and params.weixuiText != 'null' ">
+                and a.weixui_text like CONCAT('%',#{params.weixuiText},'%')
+            </if>
+
+                <!-- 判断反馈的id不为空 -->
+            <if test=" params.fankiuIdNotNull != '' and params.fankiuIdNotNull != null and params.fankiuIdNotNull != 'null' ">
+                and a.fankiu_id IS NOT NULL
+            </if>
+            <if test="params.yonghuId != null  and params.yonghuId != ''">
+                and fankiu.yonghu_id = #{params.yonghuId}
+            </if>
+            <if test=" params.fankiuName != '' and params.fankiuName != null and params.fankiuName != 'null' ">
+                and fankiu.fankiu_name like CONCAT('%',#{params.fankiuName},'%')
+            </if>
+            <if test="params.fankiuTypes != null  and params.fankiuTypes != ''">
+                and fankiu.fankiu_types = #{params.fankiuTypes}
+            </if>
+
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(fankiu.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(fankiu.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+            <if test="params.fankiuZhuangtaiTypes != null  and params.fankiuZhuangtaiTypes != ''">
+                and fankiu.fankiu_zhuangtai_types = #{params.fankiuZhuangtaiTypes}
+            </if>
+
+            <if test=" params.fankiuContent != '' and params.fankiuContent != null and params.fankiuContent != 'null' ">
+                and fankiu.fankiu_content like CONCAT('%',#{params.fankiuContent},'%')
+            </if>
+                <!-- 判断员工的id不为空 -->
+            <if test=" params.yuangongIdNotNull != '' and params.yuangongIdNotNull != null and params.yuangongIdNotNull != 'null' ">
+                and a.yuangong_id IS NOT NULL
+            </if>
+            <if test=" params.yuangongName != '' and params.yuangongName != null and params.yuangongName != 'null' ">
+                and yuangong.yuangong_name like CONCAT('%',#{params.yuangongName},'%')
+            </if>
+            <if test=" params.yuangongPhone != '' and params.yuangongPhone != null and params.yuangongPhone != 'null' ">
+                and yuangong.yuangong_phone like CONCAT('%',#{params.yuangongPhone},'%')
+            </if>
+            <if test=" params.yuangongIdNumber != '' and params.yuangongIdNumber != null and params.yuangongIdNumber != 'null' ">
+                and yuangong.yuangong_id_number like CONCAT('%',#{params.yuangongIdNumber},'%')
+            </if>
+        </where>
+        order by a.${params.sort} ${params.order}
+    </select>
+
+</mapper>

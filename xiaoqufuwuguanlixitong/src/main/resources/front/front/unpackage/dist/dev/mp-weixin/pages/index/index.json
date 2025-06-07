@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#e92758",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "小区服务管理系统首页",
+  "usingComponents": {
+    "uni-icons": "/components/uni-ui/lib/uni-icons/uni-icons"
+  }
+}

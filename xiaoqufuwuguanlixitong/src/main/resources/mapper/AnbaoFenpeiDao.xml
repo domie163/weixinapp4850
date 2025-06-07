@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AnbaoFenpeiDao">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        a.id as id
+        ,a.anbao_fenpei_name as anbaoFenpeiName
+        ,a.anbao_id as anbaoId
+        ,a.anbao_fenpei as anbaoFenpei
+        ,a.anbao_fenpei_types as anbaoFenpeiTypes
+        ,a.anpai_time as anpaiTime
+        ,a.zhxing_time as zhxingTime
+        ,a.anbao_fenpei_xiangqing as anbaoFenpeiXiangqing
+        ,a.create_time as createTime
+    </sql>
+    <select id="selectListView" parameterType="map" resultType="com.entity.view.AnbaoFenpeiView" >
+        SELECT
+        <include refid="Base_Column_List" />
+
+--         级联表的字段
+        ,anbao.anbao_name as anbaoName
+        ,anbao.anbao_phone as anbaoPhone
+        ,anbao.anbao_id_number as anbaoIdNumber
+        ,anbao.anbao_photo as anbaoPhoto
+        ,anbao.sex_types as sexTypes
+
+        FROM anbao_fenpei  a
+        left JOIN anbao anbao ON a.anbao_id = anbao.id
+
+        <where>
+            <if test="params.ids != null">
+                and a.id in
+                <foreach item="item" index="index" collection="params.ids" open="(" separator="," close=")">
+                #{item}
+                </foreach>
+            </if>
+            <if test=" params.anbaoFenpeiName != '' and params.anbaoFenpeiName != null and params.anbaoFenpeiName != 'null' ">
+                and a.anbao_fenpei_name like CONCAT('%',#{params.anbaoFenpeiName},'%')
+            </if>
+            <if test="params.anbaoId != null and params.anbaoId != ''">
+                and (
+                    a.anbao_id = #{params.anbaoId}
+                )
+            </if>
+            <if test=" params.anbaoFenpei != '' and params.anbaoFenpei != null and params.anbaoFenpei != 'null' ">
+                and a.anbao_fenpei like CONCAT('%',#{params.anbaoFenpei},'%')
+            </if>
+            <if test="params.anbaoFenpeiTypes != null and params.anbaoFenpeiTypes != ''">
+                and a.anbao_fenpei_types = #{params.anbaoFenpeiTypes}
+            </if>
+            <if test=" params.anpaiTimeStart != '' and params.anpaiTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.anpai_time) >= UNIX_TIMESTAMP(#{params.anpaiTimeStart}) ]]>
+            </if>
+            <if test=" params.anpaiTimeEnd != '' and params.anpaiTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.anpai_time) <= UNIX_TIMESTAMP(#{params.anpaiTimeEnd}) ]]>
+            </if>
+            <if test=" params.zhxingTimeStart != '' and params.zhxingTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.zhxing_time) >= UNIX_TIMESTAMP(#{params.zhxingTimeStart}) ]]>
+            </if>
+            <if test=" params.zhxingTimeEnd != '' and params.zhxingTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.zhxing_time) <= UNIX_TIMESTAMP(#{params.zhxingTimeEnd}) ]]>
+            </if>
+            <if test=" params.anbaoFenpeiXiangqing != '' and params.anbaoFenpeiXiangqing != null and params.anbaoFenpeiXiangqing != 'null' ">
+                and a.anbao_fenpei_xiangqing like CONCAT('%',#{params.anbaoFenpeiXiangqing},'%')
+            </if>
+
+                <!-- 判断安保的id不为空 -->
+            <if test=" params.anbaoIdNotNull != '' and params.anbaoIdNotNull != null and params.anbaoIdNotNull != 'null' ">
+                and a.anbao_id IS NOT NULL
+            </if>
+            <if test=" params.anbaoName != '' and params.anbaoName != null and params.anbaoName != 'null' ">
+                and anbao.anbao_name like CONCAT('%',#{params.anbaoName},'%')
+            </if>
+            <if test=" params.anbaoPhone != '' and params.anbaoPhone != null and params.anbaoPhone != 'null' ">
+                and anbao.anbao_phone like CONCAT('%',#{params.anbaoPhone},'%')
+            </if>
+            <if test=" params.anbaoIdNumber != '' and params.anbaoIdNumber != null and params.anbaoIdNumber != 'null' ">
+                and anbao.anbao_id_number like CONCAT('%',#{params.anbaoIdNumber},'%')
+            </if>
+            <if test="params.sexTypes != null  and params.sexTypes != ''">
+                and anbao.sex_types = #{params.sexTypes}
+            </if>
+
+        </where>
+        order by a.${params.sort} ${params.order}
+    </select>
+
+</mapper>

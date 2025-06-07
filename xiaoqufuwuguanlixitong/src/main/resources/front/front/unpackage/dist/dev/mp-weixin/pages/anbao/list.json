@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#e92758",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "安保展示",
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni"
+  }
+}
